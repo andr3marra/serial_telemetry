@@ -57,8 +57,8 @@ class Window2(QDialog):
 
         self.comboBox2 = QComboBox(self)
         self.port = serialList.serial_ports()[::-1]
-        if(self.port == "[]"): 
-            print("Vazio")
+        if(not self.port): 
+            print("Vazios")
         print(self.port)
         self.comboBox2.addItems(self.port)
         if(os.path.exists('config.ini')):
